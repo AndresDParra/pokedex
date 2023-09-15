@@ -5,12 +5,14 @@ import PIL.Image
 import PIL.ImageTk
 import urllib3
 
+__name__=='__main__';
+
 pokemon = pypokedex.get(name="charmander")
-# print(pokemon.dex)
-# print(pokemon.name)
-# print(pokemon.abilities)
-# print(pokemon.types)
-# print(pokemon.sprites.front.get("default"))
+print(pokemon.dex)
+print(pokemon.name)
+print(pokemon.abilities)
+print(pokemon.types)
+print(pokemon.sprites.front.get("default"))
 
 window = tk.Tk()
 window.geometry("600x500")
@@ -18,14 +20,14 @@ window.title("pokedex")
 window.config(padx=10, pady=10)
 
 title_label = tk.Label(window, text="Parra Pokedex")
-title_label.config(font=("Ariel", 32))
+title_label.config(font=("Arial", 32))
 title_label.pack(padx=10, pady=10)
 
 pokemon_image = tk.Label(window)
 pokemon_image.pack()
 
 pokemon_information = tk.Label(window)
-pokemon_information.config(font=("Ariel", 20))
+pokemon_information.config(font=("Arial", 20))
 pokemon_information.pack(padx=10, pady=10)
 
 pokemon_types = tk.Label(window)
